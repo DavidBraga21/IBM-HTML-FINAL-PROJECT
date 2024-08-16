@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="script" href="./Script.js">
+</head>
+<body>
+
+    <header>
+        <div id="title">
+        <h1>John Snow</h1>
+        <h6>kingofthenorth@gmail.com</h6>
+        <h6>+9999999999</h6><br>
+    </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#recommendations">Recommendations</a>
+        </nav>
+    
+    </header>
+
+    <section id="about">
+        <img src="../Projects/IMG/jon-snow-series-1200.webp" alt="Profile Image" width="150">
+        <div>
+            <h2>About Me</h2>
+            <p>I am a a passionate tech enthusiast who graduated from high school with honors. I have always been interested in how technology can solve real-world problems, leading him to pursue a degree in Information Technology. Proficient in Python, Java, and SQL; strong understanding of database systems, web development, and network administration.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="card">
+                <img src="./IMG/html.png" alt="HTML">
+                <h3>HTML</h3>
+                <p>Markup language for creating web pages.</p>
+            </div>
+            <div class="card">
+                <img src="./IMG/css.png" alt="CSS">
+                <h3>CSS</h3>
+                <p>Stylesheet language for designing web pages.</p>
+            </div>
+            <div class="card">
+                <img src="./IMG/javas.png" alt="JavaScript">
+                <h3>JavaScript</h3>
+                <p>Scripting language for interactive web content.</p>
+            </div>
+
+            <div class="card">
+                <img src="./IMG/pithon.png" alt="Python">
+                <h3>JavaScript</h3>
+                <p>Python is a high-level, interpreted, imperative, object-oriented Scripting language </p>
+            </div>
+
+            <div class="card">
+                <img src="./IMG/ionic.png" alt="Ionic">
+                <h3>JavaScript</h3>
+                <p>Ionic is an open-source UI toolkit for building cross-platform applications </p>
+            </div>
+
+      
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Personal Finance Tracker</h3>
+            <p>The Personal Finance Tracker is a web or mobile application that helps users manage their finances by tracking income, expenses, and savings. Users can categorize their spending, set budget limits, and generate reports to visualize their financial health. The application may include features like goal setting, recurring expenses, and alerts for overspending. This project involves working with databases, creating a user-friendly interface, and possibly integrating with third-party APIs for currency conversion or bank transactions.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>The Recipe Sharing Platform is a community-based web application where users can share their favorite recipes, search for new ones, and connect with other cooking enthusiasts. Users can create profiles, upload recipes with images and instructions, and rate or comment on other users' submissions. The platform can also include features like recipe categorization, advanced search filters, and personalized recipe recommendations based on user preferences. This project will require handling user authentication, database management, and building an interactive UI.</p>
+        </div>
+        <div class="project">
+            <h3>Project 3</h3>
+            <p>The AI-Powered Chatbot project involves creating a conversational agent that can interact with users in natural language. The chatbot can be designed for various purposes, such as customer support, virtual assistants, or educational tools. The project will require implementing natural language processing (NLP) techniques, training machine learning models, and integrating the chatbot with messaging platforms like Facebook Messenger or Slack. Advanced features might include sentiment analysis, voice recognition, and multi-language support.</p>
+        </div>
+    </section>
+
+    <section id="recommendations">
+        <h2>Recommendations</h2>
+        <div id="recommendations-list" class="card-container">
+            <div class="card">Recommendation 1...</div>
+            <div class="card">Recommendation 2...</div>
+            <div class="card">Recommendation 3...</div>
+        </div>
+        <form id="recommendation-form">
+            <input type="text" id="new-recommendation" placeholder="Add a new recommendation"><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <img id="home-icon" src="./IMG/download.png" alt="Home Icon">
+
+    <script>
+        document.getElementById('recommendation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const newRecommendation = document.getElementById('new-recommendation').value;
+            if (newRecommendation) {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.textContent = newRecommendation;
+                document.getElementById('recommendations-list').appendChild(card);
+                alert('Thank you for your recommendation!');
+                document.getElementById('new-recommendation').value = '';
+            }
+        });
+    </script>
+    
+</body>
+</html>
